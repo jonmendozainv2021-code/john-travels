@@ -1,4 +1,4 @@
-import{_ as u}from"./index-Z1WSh4wW.js";function f(n){return new Worker("/john-travels/assets/pdf.worker.min-BRG_qK7b.js",{name:n==null?void 0:n.name})}function c(n){let t="",r=null,o=null;for(const e of n){if(typeof e.str!="string")continue;const s=e.transform?e.transform[5]:null,a=e.transform?e.transform[4]:null;if(e.str!==""){if(t&&!/\n$/.test(t)){if(r!==null&&s!==null&&Math.abs(s-r)>2)t+=`
+import{_ as u}from"./index-UDk2jrxd.js";function f(n){return new Worker("/john-travels/assets/pdf.worker.min-BRG_qK7b.js",{name:n==null?void 0:n.name})}function c(n){let t="",r=null,o=null;for(const e of n){if(typeof e.str!="string")continue;const s=e.transform?e.transform[5]:null,a=e.transform?e.transform[4]:null;if(e.str!==""){if(t&&!/\n$/.test(t)){if(r!==null&&s!==null&&Math.abs(s-r)>2)t+=`
 `;else if(!/\s$/.test(t)&&!/^\s/.test(e.str)){const i=o!==null&&a!==null&&Math.abs(a-o)<.5;t+=i?"":" "}}t+=e.str,r=s,o=a!==null?a+(e.width??0):null}e.hasEOL&&!/\n$/.test(t)&&(t+=`
 `)}return t}async function d(n){const t=[];for(let r=1;r<=n.numPages;r++){const e=await(await n.getPage(r)).getTextContent();t.push(c(e.items))}return t.join(`
 `).replace(/[ \t ]+\n/g,`
